@@ -44,7 +44,7 @@ def search(update, context):
     search_query = update.message.text
 
     # Выполнение поискового запроса на удаленном сервере
-    cmd = f'ssh root@{REMOTE_SERVER_IP} "bash ./searchGPT2.sh {search_query}"'
+    cmd = f'ssh root@{REMOTE_SERVER_IP} "bash ./searchGPT2.sh {search_query}"' #Скрипт поиска на удаленном сервере
     result = subprocess.check_output(cmd, shell=True).decode('utf-8')
 
 # Разделение ответа на части, если он превышает максимальную длину сообщения
